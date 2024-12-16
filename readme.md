@@ -22,30 +22,40 @@ Notifications en temps réel : Notifications pour les confirmations de réservat
 ## Interfaces
 
 ```
-artist->master: POST venue
-vendor->master: GET Gigs
-master->vendor: Collection<Gigs>
 
-Customer->vendor: cli:gig selection
+title Plateforme de covoiturage 
 
-vendor->master: jms:booking
-alt booking successfull
-    master->vendor: transitional tickets
-    vendor->Customer: ticket purshase ok
-    Customer->vendor: cli:customer informations
-    
-    vendor->master: jms:ticketing
-    master->vendor: tickets
+actor Passager
+participant Système
+participant Réservation
+participant Paiement
+database BaseDeDonnées
 
-else booking unsuccessfull
-    master->vendor: no quota for gigs
+note over Passager: Recherche et réservation
+Passager->Système: Recherche de trajets (localisation, date, prix)
+Système->BaseDeDonnées: Requête sur les trajets disponibles
+BaseDeDonnées-->Système: Liste des trajets trouvés
+Système-->Passager: Résultats de la recherche
+Passager->Système: Sélection d'un trajet et début réservation
+
+note over Système: Processus de paiement
+Système->Paiement: Créer une transaction
+Paiement->Paiement: Traitement sécurisé
+Paiement-->Système: Paiement réussi ou échec
+
+alt Paiement réussi
+    Système->Réservation: Confirmer la réservation
+    Réservation->BaseDeDonnées: Mise à jour des places disponibles
+    BaseDeDonnées-->Réservation: Confirmation
+    Réservation-->Système: Réservation confirmée
+    Système-->Passager: Réservation et paiement confirmés
+else Paiement échoué
+    Système-->Passager: Échec du paiement
 end
 
-opt venue cancellation
-    artist->master: DELETE venue
-    master->vendor: jms:topic:cancellation
-    vendor->Customer: smtp:cancellation email
-end
+note over Système: Notifications en temps réel
+Système->Passager: Notifications (confirmation, annulation, rappels)
+
 ```
 ![](seqDiagram.png)
 
