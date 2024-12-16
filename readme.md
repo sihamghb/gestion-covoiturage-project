@@ -70,9 +70,9 @@ Système->Passager: Notifications (confirmation, annulation, rappels)
 * Un  utilisateur peut rechercher des trajets qui correspondent à ses besoins ( ville départ, ville arrivée, heure )
 * Un utilisateur peut réserver un trajet
 * Un utilisateur doit payer pour réserver son trajet.
-* Lorsqu'un trajet est réservé le nombre de place du trajet dour être mis à jour
+* Lorsqu'un trajet est réservé le nombre de place du trajet doit être mis à jour
 * Quand le nombre de place est atteint la publication est archivée
-* 
+* L'utilisateur reçoit une notifications lorsque le trajet est bien réserver 
 
 
 ## Exigences non fonctionnelles
