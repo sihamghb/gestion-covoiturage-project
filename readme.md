@@ -65,7 +65,7 @@ Système->Passager: Notifications (confirmation, annulation, rappels)
 
 ## Exigences fonctionnelles
 
-* Un utilisateur  doit pouvoir s'inscrire et se connecter et choisir son rôle.
+* Un utilisateur  doit pouvoir s'inscrire et se connecter.
 * Un utilisateur peut publier un trajet
 * Un  utilisateur peut rechercher des trajets qui correspondent à ses besoins ( ville départ, ville arrivée, heure )
 * Un utilisateur peut réserver un trajet
