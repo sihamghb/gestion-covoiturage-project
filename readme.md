@@ -13,9 +13,8 @@ Gestion des rôles : conducteur ou passager.
 Publication de trajets : Les conducteurs peuvent publier des trajets avec des détails comme la ville de départ, la destination, les horaires, le prix, et les places disponibles.
 
 Recherche et réservation de trajets : Recherche avancée de trajets (par localisation, date, prix, etc.)
-Réservation de places disponibles.
 
-Paiements en ligne : Intégration d'une solution de paiement (ex : Stripe, PayPal).
+Réservation de places disponibles.
 
 Notifications en temps réel : Notifications pour les confirmations de réservation, les annulations, et les rappels de trajets.
 
