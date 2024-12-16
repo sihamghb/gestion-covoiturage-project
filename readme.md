@@ -19,7 +19,7 @@ Paiements en ligne : Intégration d'une solution de paiement (ex : Stripe, PayPa
 
 Notifications en temps réel : Notifications pour les confirmations de réservation, les annulations, et les rappels de trajets.
 
-Suivi GPS en temps réel :  Permettre aux passagers de suivre le trajet en temps réel via une carte.
+
 ## Interfaces
 
 ```
