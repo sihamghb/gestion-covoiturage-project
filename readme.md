@@ -57,22 +57,25 @@ note over Système: Notifications en temps réel
 Système->Passager: Notifications (confirmation, annulation, rappels)
 
 ```
-![](seqDiagram.png)
+
 
 ## Schéma relationnel
 
-![](EER.png)
+
 
 ## Exigences fonctionnelles
 
-* le vendor NE DOIT proposer que les concerts pour lesquels il a un quota disponible, transmis par le master.
-* le vendor DOIT pouvoir effectuer les opérations de booking et ticketing
-* le master DOIT permettre à l'artiste d'annuler son concert.
-* le master DOIT informer le vendor en cas d'annulation de concert
-* le vendor DOIT informer les clients de l'annulation du concert par mail
-* le master DOIT proposer un service de validation de la clé du ticket, pour les contrôles aux entées.
+* Un utilisateur  doit pouvoir s'inscrire et se connecter et choisir son rôle.
+* Un utilisateur peut publier un trajet
+* Un  utilisateur peut rechercher des trajets qui correspondent à ses besoins ( ville départ, ville arrivée, heure )
+* Un utilisateur peut réserver un trajet
+* Un utilisateur doit payer pour réserver son trajet.
+* Lorsqu'un trajet est réservé le nombre de place du trajet dour être mis à jour
+* Quand le nombre de place est atteint la publication est archivée
+* 
+
 
 ## Exigences non fonctionnelles
 
-* le booking et le ticketing, bien qu'étant des opérations synchrones, DOIVENT être fiables et donc utiliser le messaging
-* Lors de l'annulation de tickets, le master DOIT informer tous les vendors de l'annulation, de façon fiable.
+* 
+* 
